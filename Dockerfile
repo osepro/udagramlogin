@@ -2,7 +2,7 @@
 FROM node:13
 
 # Create app directory in Docker
-WORKDIR /udagramfeeds
+WORKDIR /udagramlogin
 
 # Install app dependencies by copying
 # package.json and package-lock.json
@@ -15,7 +15,7 @@ RUN npm install
 COPY . .
 
 # Set the API’s port number
-EXPOSE 7070
+EXPOSE 9090
 
 # Define Docker’s behavior when the image is run
 CMD ["npm", "run", "dev"]
